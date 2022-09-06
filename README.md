@@ -1,6 +1,6 @@
 # Metrics-Webapp
 
-"Math magicians" is an app that displays a list of popular stock market prices. Users can click on selected categories including forex, majors, cryptocurrencies, stocks, and ETFs. Each category lists the latest prices update for the pair. Consumes the Financial Modeling Prep API.
+"Metrics-Webapp" is an app that displays a list of popular stock market prices. Users can click on selected categories including forex, majors, cryptocurrencies, stocks, and ETFs. Each category lists the latest prices update for the pair. Consumes the Financial Modeling Prep API.
 
 The present project is part of the Microverse curriculum Module 3 Block 5 Capstone Project. The main objective is putting hands on practice to build a web application using React and API.
 
