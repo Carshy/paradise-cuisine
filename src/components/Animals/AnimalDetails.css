@@ -1,6 +1,5 @@
 .animal-info {
   position: fixed;
-  /* top: 10px; */
   right: 300px;
   background-color: rgba(104, 107, 150, 0.849);
   background-color: #4369b2;;
@@ -16,7 +15,6 @@
 
 .animal-title {
   font-size: 34px;
-  font-weight: bold;
   text-align: center;
 }
 
@@ -35,7 +33,6 @@
 
 .animal-characteristics {
   font-size: 28px;
-  font-weight: bold;
   text-align: center;
   margin-bottom: 2%;
 }

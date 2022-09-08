@@ -15,9 +15,27 @@ function Animals() {
       dispatch(fetchAnimalsDataFromApi());
     }
   }, [animals.length, dispatch]);
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    let myValue = e.target.value;
+    if (myValue.length > 0) {
+      myValue = myValue.toLowerCase();
+      const filteredAnmls = animals.filter((animal) => animal.name.toLowerCase().includes(myValue));
+      dispatch(filteredAnmls);
+    } else {
+      dispatch(animals);
+    }
+  };
+
   return (
     <div>
       <Dropdown />
+
+      <div className="search-field">
+        <input type="text" placeholder="Search Animal..." onChange={handleSearch} />
+      </div>
+
       <div className="animal-wrapper">
         {
           animals.map((animal) => (
