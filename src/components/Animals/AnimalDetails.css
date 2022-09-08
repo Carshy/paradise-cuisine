@@ -1,0 +1,52 @@
+.animal-info {
+  position: fixed;
+  /* top: 10px; */
+  right: 300px;
+  background-color: rgba(104, 107, 150, 0.849);
+  overflow-y: scroll;
+  height: 90vh;
+  width: 60%;
+  border-radius: 30px;
+  padding-top: 20px;
+  color: #fff;
+  /* color: #28317e; */
+}
+
+.animal-title {
+  font-size: 34px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.animal-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2% 0 2% 0;
+}
+
+.animal-image img {
+  width: 54rem;
+  height: 24rem;
+  border-radius: 8px;
+}
+
+.animal-characteristics {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2%;
+}
+
+.span-details {
+  margin: 0 0 0 15%;
+  font-size: 18px;
+}
+
+.spanned-right {
+  margin-left: 51%;
+}
+
+.spanned {
+  margin-bottom: 1.2rem;
+}

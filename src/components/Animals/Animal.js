@@ -1,7 +1,8 @@
 /* eslint-disable camelcase */
 import React from 'react';
 import PropTypes from 'prop-types';
-// import aligator1 from '../images/aligator1.jpg';
+import { Link } from 'react-router-dom';
+import arrow1 from '../images/arrow1.PNG';
 import './Animal.css';
 
 function Animal({
@@ -12,9 +13,9 @@ function Animal({
       <div className="animalia-info-div">
         <div className="animalia-dropdown">
           <img className="animal-images" src={image} alt={name} />
-          <a href="/">
-            <i className="fa fa-arrow-circle-o-right" aria-hidden="true" />
-          </a>
+          <Link to={`/details/${id}`}>
+            <img src={arrow1} className="arrow-round" alt="arrow" />
+          </Link>
         </div>
         <div className="animalia-description">
           <h2>{name}</h2>

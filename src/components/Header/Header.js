@@ -16,12 +16,12 @@ function Header() {
           </li>
           <li>
             <a href="/" className="nav-item">
-              Missions
+              Microphone
             </a>
           </li>
           <li>
             <a href="/" className="nav-item">
-              My Profile
+              Settings
             </a>
           </li>
         </ul>
