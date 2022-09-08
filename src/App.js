@@ -1,10 +1,19 @@
+import React from 'react';
+import { Provider } from 'react-redux';
+import store from './redux/configureStore';
+import Animals from './components/Animals/Animals';
+import Header from './components/Header/Header';
+import Dropdown from './components/Animals/Dropdown';
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Welcome to react Collins!</h1>
-      </header>
-    </div>
+    <Provider store={store}>
+      <div className="App">
+        <Header />
+        <Dropdown />
+        <Animals />
+      </div>
+    </Provider>
   );
 }
 
