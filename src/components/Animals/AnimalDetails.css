@@ -3,12 +3,14 @@
   /* top: 10px; */
   right: 300px;
   background-color: rgba(104, 107, 150, 0.849);
+  background-color: #4369b2;;
   overflow-y: scroll;
   height: 90vh;
   width: 60%;
   border-radius: 30px;
   padding-top: 20px;
   color: #fff;
+  opacity: 0.7;
   /* color: #28317e; */
 }
 
