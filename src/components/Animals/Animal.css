@@ -14,7 +14,7 @@
     backdrop-filter: blur(8px);
     border-radius: 10px;
   }
-  
+
   .top-description {
     font-size: 44px;
     color: #fff;
@@ -26,19 +26,93 @@
     flex-direction: row;
     padding: 24px;
   }
-  
+
   .animal-images {
-    width: 28rem;
-    height: 21rem;
+    width: 12rem;
+    height: 10rem;
     border-radius: 8px;
   }
-  
+
   .animalia-description {
     display: grid;
     justify-content: end;
     padding-right: 4rem;
   }
-  
+
+  .animalia-description h2 {
+    font-size: 1.3rem;
+  }
+
+  .animalia-description h3 {
+    font-size: 1.2rem;
+  }
+
+  .animal-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    align-items: center;
+    column-gap: 30px;
+    row-gap: 30px;
+    justify-content: center;
+  }
+
+  .animalia-info-div {
+    margin: auto;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    box-shadow: 10px 5px 5px rgba(227, 226, 226, 0.634);
+    cursor: pointer;
+    width: 18rem;
+    height: 18rem;
+    color: #fff;
+  }
+
+  .arrow-round {
+    width: 1.8rem;
+    margin-left: 24px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .animalia-top-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background-repeat: no-repeat;
+    height: 23rem;
+  }
+
+  .big-five {
+    width: 39rem;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+  }
+
+  .top-description {
+    font-size: 44px;
+    color: #fff;
+  }
+
+  .animalia-dropdown {
+    display: flex;
+    flex-direction: row;
+    padding: 24px;
+  }
+
+  .animal-images {
+    width: 28rem;
+    height: 21rem;
+    border-radius: 8px;
+  }
+
+  .animalia-description {
+    display: grid;
+    justify-content: end;
+    padding-right: 4rem;
+  }
+
   .animal-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -50,7 +124,7 @@
     margin: auto;
     margin: 0 16rem 0 16rem;
   }
-  
+
   .animalia-info-div {
     margin: auto;
     border: 1px solid transparent;
@@ -61,78 +135,9 @@
     height: 35rem;
     color: #fff;
   }
-  
+
   .arrow-round {
     width: 1.8rem;
     margin-left: 24px;
-  }  
-
-}
-
-@media screen and (min-width: 768px) {
-.animalia-top-section {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-  background-repeat: no-repeat;
-  height: 23rem;
-}
-
-.big-five {
-  width: 39rem;
-  backdrop-filter: blur(10px);
-  border-radius: 10px;
-}
-
-.top-description {
-  font-size: 44px;
-  color: #fff;
-}
-
-.animalia-dropdown {
-  display: flex;
-  flex-direction: row;
-  padding: 24px;
-}
-
-.animal-images {
-  width: 28rem;
-  height: 21rem;
-  border-radius: 8px;
-}
-
-.animalia-description {
-  display: grid;
-  justify-content: end;
-  padding-right: 4rem;
-}
-
-.animal-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-  align-items: center;
-  column-gap: 50px;
-  row-gap: 50px;
-  justify-content: center;
-  margin: auto;
-  margin: 0 16rem 0 16rem;
-}
-
-.animalia-info-div {
-  margin: auto;
-  border: 1px solid transparent;
-  border-radius: 15px;
-  box-shadow: 10px 5px 5px rgba(227, 226, 226, 0.634);
-  cursor: pointer;
-  width: 38rem;
-  height: 35rem;
-  color: #fff;
-}
-
-.arrow-round {
-  width: 1.8rem;
-  margin-left: 24px;
-}
+  }
 }
