@@ -21,6 +21,52 @@
     text-align: center;
   }
 
+  .animalia-dropdown {
+    display: flex;
+    flex-direction: row;
+    padding: 24px;
+  }
+  
+  .animal-images {
+    width: 28rem;
+    height: 21rem;
+    border-radius: 8px;
+  }
+  
+  .animalia-description {
+    display: grid;
+    justify-content: end;
+    padding-right: 4rem;
+  }
+  
+  .animal-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    align-items: center;
+    column-gap: 50px;
+    row-gap: 50px;
+    justify-content: center;
+    margin: auto;
+    margin: 0 16rem 0 16rem;
+  }
+  
+  .animalia-info-div {
+    margin: auto;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    box-shadow: 10px 5px 5px rgba(227, 226, 226, 0.634);
+    cursor: pointer;
+    width: 38rem;
+    height: 35rem;
+    color: #fff;
+  }
+  
+  .arrow-round {
+    width: 1.8rem;
+    margin-left: 24px;
+  }  
+
 }
 
 @media screen and (min-width: 768px) {
@@ -42,8 +88,6 @@
 .top-description {
   font-size: 44px;
   color: #fff;
-}
-
 }
 
 .animalia-dropdown {
@@ -90,4 +134,5 @@
 .arrow-round {
   width: 1.8rem;
   margin-left: 24px;
+}
 }
