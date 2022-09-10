@@ -4,15 +4,18 @@
 
 The present project is part of the Microverse curriculum Module 3 Block 5 Capstone Project. The main objective is putting hands on practice to build a web application using React and API.
 
-![screenshot](img/photo2.PNG)
+#### Home page
+![screenshot](src/components/images/snapshot1.PNG)
 
-![screenshot](img/photo3.PNG)
+#### Details page
+![screenshot](src/components/images/snapshot2.PNG)
 
 ## Built With
 
-- CSS
 - JavaScript
 - React
+- Redux
+- Jest
 
 ## Additional Tools
 
@@ -25,7 +28,9 @@ The present project is part of the Microverse curriculum Module 3 Block 5 Capsto
 
 ## Live Demo 
 
-Live Demo Link found [Coming Soon]()
+Live Demo Link found [Here](https://carshy.github.io/metrics-webapp/)
+
+Presentation video [Here](https://www.loom.com/share/d558868d35e1445fb35191369112b273)
 
 ## Getting Started
 
@@ -78,7 +83,7 @@ Give a ⭐️ if you like this project!
 - This project is part of week 1 of module 3 in the Microverse study program.
 - Thanks to the Microverse team for the great curriculum 🙌.
 - Thanks to Code Reviewers for the insightful feedback ⚡.
-- A great thanks to My coding partners, morning session team, and standup team Partners for their contributions 💘.
+- A great thanks to [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio) for design contributions 💘.
 
 ## 📝 License
 

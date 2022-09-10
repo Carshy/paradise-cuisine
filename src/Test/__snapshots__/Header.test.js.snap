@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders correctly 1`] = `
+<div>
+  <nav
+    className="navigation-section"
+  >
+    <a
+      className="nav-link"
+      href="/"
+      onClick={[Function]}
+    >
+      <img
+        alt="Back Arrow"
+        src="arrow2.PNG"
+      />
+      <h1>
+        Home
+      </h1>
+    </a>
+    <ul
+      className="nav-group"
+    >
+      <li>
+        <a
+          className="nav-item"
+          href="/"
+        >
+          Animals
+        </a>
+      </li>
+      <li>
+        <a
+          className="nav-items"
+          href="/"
+        >
+          <img
+            alt="settings"
+            src="arrow3.PNG"
+          />
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+`;
