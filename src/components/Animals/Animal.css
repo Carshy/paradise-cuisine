@@ -2,10 +2,18 @@
   .animalia-top-section {
     display: flex;
     flex-direction: column;
+    background-repeat: no-repeat;
     justify-content: center;
     align-items: center;
     width: 100%;
     margin: 3% 0 3% 0;
+    background-image: 
+        linear-gradient(to bottom, rgba(18,42, 66, 0.5), rgba(18,42, 66, .85)), 
+        url("../images//phoro2.jpg");
+       -webkit-background-size: 100% 100%;
+        -moz-background-size: 100% 100%;
+        -o-background-size: 100% 100%;
+        background-size: 100% 100%; 
   }
 
   .big-five {
@@ -79,11 +87,22 @@
 @media screen and (min-width: 768px) {
   .animalia-top-section {
     display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     justify-content: space-around;
     align-items: center;
     width: 100%;
     background-repeat: no-repeat;
     height: 23rem;
+    background-image: 
+        linear-gradient(to bottom, rgba(18,42, 66, 0.5), rgba(18,42, 66, .85)), 
+        url("../images//phoro2.jpg");
+       -webkit-background-size: 100% 100%;
+        -moz-background-size: 100% 100%;
+        -o-background-size: 100% 100%;
+        background-size: 100% 100%; 
   }
 
   .big-five {

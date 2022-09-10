@@ -1,5 +1,5 @@
 import fetchAnimals from './api';
-import FETCH_ANIMALIA from './actionType';
+import { FETCH_ANIMALIA } from './actionType';
 
 // action creators
 export const fetchAnimalsDataFromApi = () => async (dispatch) => {
