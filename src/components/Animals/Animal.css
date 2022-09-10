@@ -7,17 +7,6 @@
     align-items: center;
     width: 100%;
     margin: 3% 0 3% 0;
-    background-image: 
-    linear-gradient(
-          to bottom,
-          rgba(18, 42, 66, 0.5),
-          rgba(18, 42, 66, 0.85)
-      ),
-      url("../images//phoro2.jpg");
-    -webkit-background-size: 100% 100%;
-    -moz-background-size: 100% 100%;
-    -o-background-size: 100% 100%;
-    background-size: 100% 100%;
   }
 
   .big-five {
@@ -100,17 +89,6 @@
     width: 100%;
     background-repeat: no-repeat;
     height: 23rem;
-    background-image: 
-    linear-gradient(
-          to bottom,
-          rgba(18, 42, 66, 0.5),
-          rgba(18, 42, 66, 0.85)
-      ),
-      url("../images//phoro2.jpg");
-    -webkit-background-size: 100% 100%;
-    -moz-background-size: 100% 100%;
-    -o-background-size: 100% 100%;
-    background-size: 100% 100%;
   }
 
   .big-five {
