@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="container-section"
+>
+  <div
+    className="animalia-info-div"
+  >
+    <div
+      className="animalia-dropdown"
+    >
+      <img
+        className="animal-images"
+      />
+      <a
+        href="/details/undefined"
+        onClick={[Function]}
+      >
+        <img
+          alt="arrow"
+          className="arrow-round"
+          src="arrow1.PNG"
+        />
+      </a>
+    </div>
+    <div
+      className="animalia-description"
+    >
+      <h2 />
+      <h3 />
+    </div>
+  </div>
+</div>
+`;
