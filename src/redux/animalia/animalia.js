@@ -12,6 +12,13 @@ export const fetchAnimalsDataFromApi = () => async (dispatch) => {
   }
 };
 
+// export const searchAnimals = (payload) => (
+//   {
+//     type: SEARCH_ANIMAL,
+//     payload,
+//   }
+// );
+
 // initial state
 const animalArray = [];
 

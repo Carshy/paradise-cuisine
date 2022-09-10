@@ -1,8 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Dropdown from './Dropdown';
 import Animal from './Animal';
 import './Animal.css';
+import './Search.css';
 import { fetchAnimalsDataFromApi } from '../../redux/animalia/animalia';
 
 function Animals() {
@@ -10,6 +11,15 @@ function Animals() {
   const animals = useSelector((state) => state.animals);
   const dispatch = useDispatch();
 
+  const [myValue, setNewAnimals] = useState('');
+
+  const handleSearch = (e) => {
+    let myValue = e.target.value.trim();
+    myValue = myValue.toLowerCase();
+    setNewAnimals(myValue);
+  };
+
+  const filteredAnmls = animals.filter((animal) => animal.name.replace(/\s-/, '').toLowerCase().includes(myValue));
   useEffect(() => {
     if (!animals.length) {
       dispatch(fetchAnimalsDataFromApi());
@@ -17,10 +27,13 @@ function Animals() {
   }, [animals.length, dispatch]);
   return (
     <div>
+      <form className="search-form">
+        <input className="search" type="text" value={myValue} placeholder="Search Item..." onChange={handleSearch} />
+      </form>
       <Dropdown />
       <div className="animal-wrapper">
         {
-          animals.map((animal) => (
+          filteredAnmls.map((animal) => (
             <Animal
               key={animal.id}
               id={animal.id}
