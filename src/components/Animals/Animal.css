@@ -10,6 +10,7 @@
 
   .big-five {
     width: 768px;
+    height: 18rem;
     opacity: 0.4;
     backdrop-filter: blur(8px);
     border-radius: 10px;
