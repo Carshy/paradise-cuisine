@@ -30,6 +30,8 @@ The present project is part of the Microverse curriculum Module 3 Block 5 Capsto
 
 Live Demo Link found [Here](https://carshy.github.io/metrics-webapp/)
 
+Presentation video [Here](https://www.loom.com/share/d558868d35e1445fb35191369112b273)
+
 ## Getting Started
 
 To get a local copy of this project:
