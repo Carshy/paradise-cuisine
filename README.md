@@ -5,13 +5,17 @@
 The present project is part of the Microverse curriculum Module 3 Block 5 Capstone Project. The main objective is putting hands on practice to build a web application using React and API.
 
 #### Home page
-![screenshot](src/img/photo1.PNG)
+![screenshot](src/components/images/snapshot1.PNG)
+
+#### Details page
+![screenshot](src/components/images/snapshot2.PNG)
 
 ## Built With
 
 - JavaScript
 - React
 - Redux
+- Jest
 
 ## Additional Tools
 
