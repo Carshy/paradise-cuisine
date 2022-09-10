@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/metrics-webapp/static/css/main.8b876182.css",
+    "main.js": "/metrics-webapp/static/js/main.993945a1.js",
+    "static/js/787.e68046f2.chunk.js": "/metrics-webapp/static/js/787.e68046f2.chunk.js",
+    "static/media/photo1.jpg": "/metrics-webapp/static/media/photo1.3f2f6d7dafef074a75c0.jpg",
+    "static/media/arrow3.PNG": "/metrics-webapp/static/media/arrow3.9d27964128500e1c9674.PNG",
+    "static/media/arrow1.PNG": "/metrics-webapp/static/media/arrow1.781f00104c986adc9922.PNG",
+    "index.html": "/metrics-webapp/index.html",
+    "static/media/arrow2.PNG": "/metrics-webapp/static/media/arrow2.84e05f21ac16682a7267.PNG",
+    "main.8b876182.css.map": "/metrics-webapp/static/css/main.8b876182.css.map",
+    "main.993945a1.js.map": "/metrics-webapp/static/js/main.993945a1.js.map",
+    "787.e68046f2.chunk.js.map": "/metrics-webapp/static/js/787.e68046f2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8b876182.css",
+    "static/js/main.993945a1.js"
+  ]
+}
