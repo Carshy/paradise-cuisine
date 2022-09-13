@@ -8,5 +8,9 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: rgba(104, 107, 150, 0.849);
+  background-image: url(./components/images/back.png);
+  background-size: cover;
+  background-position: center;
+  /* background-repeat: no-repeat; */
+  backdrop-filter: blur(5px);
 }

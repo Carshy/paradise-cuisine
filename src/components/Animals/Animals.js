@@ -19,7 +19,8 @@ function Animals() {
     setNewAnimals(myValue);
   };
 
-  const filteredAnmls = animals.filter((animal) => animal.name.replace(/\s-/, '').toLowerCase().includes(myValue));
+  const filteredAnimals = animals.filter((animal) => animal.name.replace(/\s-/, '').toLowerCase().includes(myValue));
+
   useEffect(() => {
     if (!animals.length) {
       dispatch(fetchAnimalsDataFromApi());
@@ -27,13 +28,15 @@ function Animals() {
   }, [animals.length, dispatch]);
   return (
     <div>
-      <form className="search-form">
-        <input className="search" type="text" value={myValue} placeholder="Search Item..." onChange={handleSearch} />
-      </form>
+      <div className="search-box">
+        <form className="search-form">
+          <input className="search" type="text" value={myValue} placeholder="Search Item..." onChange={handleSearch} />
+        </form>
+      </div>
       <Dropdown />
       <div className="animal-wrapper">
         {
-          filteredAnmls.map((animal) => (
+          filteredAnimals.map((animal) => (
             <Animal
               key={animal.id}
               id={animal.id}
