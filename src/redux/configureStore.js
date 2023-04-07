@@ -5,6 +5,7 @@ import mealListReducer from './mealList/mealList';
 import mealInfoReducer from './meal/mealInfo';
 import ingredientReducer from './ingredients/ingredients';
 import areasReducer from './areas/areas';
+import appStateReducer from './appState/appState';
 
 const rootReducer = combineReducers({
   categories: categoriesReducer,
@@ -12,6 +13,7 @@ const rootReducer = combineReducers({
   mealInfo: mealInfoReducer,
   ingredients: ingredientReducer,
   areas: areasReducer,
+  state: appStateReducer,
 });
 
 const store = configureStore({
