@@ -40,6 +40,62 @@ export const loadCategories = createAsyncThunk(
   },
 );
 
+// ********set the states loaded to true*********
+export const updateCategoriesLoaded = () => ({
+  type: actionType.UPDATE_CATEGORIES_LOADED,
+});
+
+export const updateIngredientsLoaded = () => ({
+  type: actionType.UPDATE_INGREDIENTS_LOADED,
+});
+
+export const updateAreasLoaded = () => ({
+  type: actionType.UPDATE_AREAS_LOADED,
+});
+
+export const updateMealListLoaded = (payload) => ({
+  type: actionType.UPDATE_MEAL_LIST_LOADED,
+  payload,
+});
+
+// *********** Ingredients ******************************
+
+const formatIngredients = (ingredients) => {
+  const formattedIngredients = ingredients.map((ingredient) => ({
+    id: ingredient.idIngredient,
+    name: ingredient.strIngredient,
+    description: ingredient.strDescription,
+  }));
+  return formattedIngredients;
+};
+
+export const fetchIngredients = createAsyncThunk(
+  actionType.FETCH_INGREDIENTS,
+  async () => {
+    const { data } = await axios.get('https://themealdb.com/api/json/v1/1/list.php?i=list');
+    return formatIngredients(data.meals);
+  },
+);
+
+// *********** Areas ******************************
+
+// define forma areas
+const formatAreas = (areas) => {
+  const formattedAreas = areas.map((area) => ({
+    name: area.strArea,
+  }));
+  return formattedAreas;
+};
+
+// define an action to fetch areas
+export const fetchAreas = createAsyncThunk(
+  actionType.FETCH_AREAS,
+  async () => {
+    const { data } = await axios.get('https://themealdb.com/api/json/v1/1/list.php?a=list');
+    return formatAreas(data.meals);
+  },
+);
+
 // *********** Meals ******************************
 
 // Define formated meal list
