@@ -13,7 +13,7 @@ const rootReducer = combineReducers({
   mealInfo: mealInfoReducer,
   ingredients: ingredientReducer,
   areas: areasReducer,
-  state: appStateReducer,
+  appState: appStateReducer,
 });
 
 const store = configureStore({

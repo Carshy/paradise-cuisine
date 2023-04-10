@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { v4 } from 'uuid';
-import { fetchCategoryNames, loadCategories } from '../../redux/actions/actionCreate';
+import { fetchCategoryNames, loadCategories, updateCategoriesLoaded } from '../../redux/actions/actionCreate';
 import HomeRow from './HomeRow';
 import './Home.scss';
 
@@ -12,19 +12,23 @@ const Home = () => {
   const [categoriesLoaded, setCategoriesLoaded] = useState(false);
 
   const categories = useSelector((state) => state.categories);
+  const appState = useSelector((state) => state.appState);
 
   useEffect(() => {
+    if (appState.categoriesLoaded) return;
+
     if (!categoryNamesLoaded) {
       dispatch(fetchCategoryNames());
       setCategoryNamesLoaded(true);
     }
-  }, [categoryNamesLoaded, dispatch]);
+  }, [appState, categoriesLoaded, categoryNamesLoaded, dispatch]);
 
   useEffect(() => {
     if (!categoriesLoaded && categories.length) {
       const shouldLoadCategories = categories.every((category) => category.meals);
       if (shouldLoadCategories) {
         dispatch(loadCategories(categories));
+        dispatch(updateCategoriesLoaded());
         setCategoriesLoaded(true);
       }
     }
