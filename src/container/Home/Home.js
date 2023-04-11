@@ -13,6 +13,7 @@ const Home = () => {
 
   const categories = useSelector((state) => state.categories);
   const appState = useSelector((state) => state.appState);
+  console.log(appState);
 
   useEffect(() => {
     if (appState.categoriesLoaded) return;

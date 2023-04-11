@@ -37,6 +37,7 @@ const HomeRow = ({ category }) => {
 HomeRow.propTypes = {
   name: PropTypes.string,
   idMeal: PropTypes.string,
+  strMeal: PropTypes.string,
 }.isRequired;
 
 export default HomeRow;
