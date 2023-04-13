@@ -13,7 +13,8 @@ const Home = () => {
 
   const categories = useSelector((state) => state.categories);
   const appState = useSelector((state) => state.appState);
-  console.log(appState);
+  // const meals = useSelector((state) => state.mealInfo);
+  // console.log(meals);
 
   useEffect(() => {
     if (appState.categoriesLoaded) return;
@@ -35,10 +36,12 @@ const Home = () => {
     }
   }, [categories, categoriesLoaded, dispatch]);
   return (
-    <div className="app__home">
-      {categories.map((category) => (
-        <HomeRow key={v4()} category={category} />
-      ))}
+    <div>
+      <div className="app__home">
+        {categories.map((category) => (
+          <HomeRow key={v4()} category={category} />
+        ))}
+      </div>
     </div>
   );
 };

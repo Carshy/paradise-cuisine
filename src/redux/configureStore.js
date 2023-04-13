@@ -10,7 +10,7 @@ import appStateReducer from './appState/appState';
 const rootReducer = combineReducers({
   categories: categoriesReducer,
   mealList: mealListReducer,
-  mealInfo: mealInfoReducer,
+  meal: mealInfoReducer,
   ingredients: ingredientReducer,
   areas: areasReducer,
   appState: appStateReducer,
