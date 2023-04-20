@@ -11,8 +11,9 @@ import {
 import { formatString } from '../Utils/Utils';
 import './Ingredients.scss';
 
+const Ingredients = ({ mediaWidth }) => {
+  const [searchValue, setSearchValue] = useState('');
 
-const Ingredients = () => {
   return (
     <main className="ingredients">
       
