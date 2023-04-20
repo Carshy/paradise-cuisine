@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react';
 
 const Ingredients = () => {
   return (
-    <div>
+    <>
       
-    </div>
+    </>
   )
 }
 
