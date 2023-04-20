@@ -33,11 +33,28 @@ const Ingredients = ({ mediaWidth }) => {
   ingredients = ingredients.filter((ingredient) =>
     ingredient.name.toLowerCase().includes(searchValue.toLowerCase()));
 
+  const ingredientsStyles = {
+    display: 'flex',
+    flexWrap: 'wrap',
+    gap: '.5em',
+  };
+
   return (
     <main className="ingredients">
-      
+      <section className="ingredients__col1" style={mediaWidth > 700 ? { width: '50%' } : { flex: '1' }}>
+        <div className="ingredients__header">
+          <input
+            type="text"
+            placeholder="Search meals by ingredient..."
+            value={searchValue}
+            onChange={(event) => {
+              setSearchValue(event.target.value);
+            }}
+          />
+        </div>
+      </section>
     </main>
-  )
+  );
 };
 
 export default Ingredients;
