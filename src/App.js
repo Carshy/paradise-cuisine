@@ -1,20 +1,47 @@
-/* eslint-disable arrow-body-style */
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.scss';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import Nav from './components/Nav/Nav';
 import Home from './container/Home/Home';
+import MealList from './container/Meal/MealList';
+import Ingredients from './container/Ingredients/Ingredients';
 import store from './redux/configureStore';
 
 const App = () => {
+  const [mediaWidth, setMediaWidth] = useState(0);
+  window.addEventListener('resize', () => {
+    setMediaWidth(window.innerWidth);
+  });
+
+  useEffect(() => {
+    setMediaWidth(window.innerWidth);
+  }, [setMediaWidth]);
   return (
     <Provider store={store}>
       <Router>
         <div className="App">
-          <Nav />
+          <Nav mediaWidth={mediaWidth} />
           <Routes>
             <Route element={<Home />} path="/" />
+            {mediaWidth > 700 ? (
+              <Route
+                path="/ingredients/"
+                element={<Ingredients mediaWidth={mediaWidth} />}
+              >
+                <Route path=":ingredient" element={<MealList />} />
+              </Route>
+            ) : (
+              <>
+                <Route
+                  path="/ingredients"
+                  element={<Ingredients mediawidth={mediaWidth} />}
+                />
+                <Route path="/ingredients/:ingredient" element={<MealList />} />
+              </>
+            )}
+            <Route path="/areas" element={<Areas />} />
+            <Route path="/areas/:area" element={<MealList />} />
           </Routes>
         </div>
       </Router>
