@@ -40,8 +40,8 @@ const App = () => {
                 <Route path="/ingredients/:ingredient" element={<MealList />} />
               </>
             )}
-            <Route path="/areas" element={<Areas />} />
-            <Route path="/areas/:area" element={<MealList />} />
+            {/* <Route path="/areas" element={<Areas />} />
+            <Route path="/areas/:area" element={<MealList />} /> */}
           </Routes>
         </div>
       </Router>

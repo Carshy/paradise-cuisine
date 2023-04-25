@@ -17,15 +17,16 @@ const MealList = () => {
     setMediaWidth(window.innerWidth);
   });
 
-  useEffect(() => {
-    setMediaWidth(window.innerWidth);
-  }, []);
-
   const navigate = useNavigate();
   const params = useParams();
   const dispatch = useDispatch();
   const mealList = useSelector((state) => state.mealList);
+  console.log(mealList);
   const { mealListLoaded } = useSelector((state) => state.appState);
+
+  useEffect(() => {
+    setMediaWidth(window.innerWidth);
+  }, []);
 
   useEffect(() => {
     if (params.ingredient) {

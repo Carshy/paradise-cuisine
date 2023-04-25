@@ -31,8 +31,10 @@ const MealCard = ({ meal }) => {
 };
 
 MealCard.propTypes = {
-  strMeal: PropTypes.string,
-  strMealThumb: PropTypes.string,
-}.isRequired;
+  meal: PropTypes.shape({
+    strMeal: PropTypes.string,
+    strMealThumb: PropTypes.string,
+  }).isRequired,
+};
 
 export default MealCard;

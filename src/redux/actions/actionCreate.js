@@ -100,12 +100,12 @@ export const fetchAreas = createAsyncThunk(
 
 // Define formated meal list
 const formatMealList = (mealList) => {
-  const fomattedMealList = mealList.map((meal) => ({
+  const formattedMealList = mealList.map((meal) => ({
     id: meal.idMeal,
     name: meal.strMeal,
     image: meal.strMealThumb,
   }));
-  return fomattedMealList;
+  return formattedMealList;
 };
 
 // Define the async thunk to fetch the formatted meal list
