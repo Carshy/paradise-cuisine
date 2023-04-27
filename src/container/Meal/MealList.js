@@ -21,7 +21,6 @@ const MealList = () => {
   const params = useParams();
   const dispatch = useDispatch();
   const mealList = useSelector((state) => state.mealList);
-  console.log(mealList);
   const { mealListLoaded } = useSelector((state) => state.appState);
 
   useEffect(() => {
