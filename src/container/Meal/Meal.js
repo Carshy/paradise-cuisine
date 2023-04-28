@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-boolean-value */
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
@@ -73,12 +74,43 @@ const Meal = () => {
               </div>
             </div>
           </section>
-          
+          {(isValidString(meal.strYoutube) ||
+            isValidString(meal.strSource)) && (
+              <section className="meal__help">
+                <h2>Still Confused?</h2>
+                <div>
+                  {isValidString(meal.strYoutube) && (
+                    <a href={meal.strYoutube} target="_blank" ref="norefferrer">
+                      <AiFillYoutube/>
+                    </a>
+                  )}
+                  {isValidString(meal.strYoutube) && (
+                    <a href={meal.strYoutube} target="_blank" ref="norefferrer">
+                      <BsJournalBookmark />
+                    </a>
+                  )}
+                </div>
+              </section>
+            )}
         </>
-      ) :
-    }
+      ) : (
+        <TailSpin
+          height="150"
+          width="150"
+          color="#c0841d"
+          ariaLabel="tail-spin-loading"
+          radius="2"
+          wrapperStyle={{
+            marginInline: 'auto',
+            marginTop: '5em',
+            opacity: '0.5',
+          }}
+          wrapperClass=""
+          visible={true}
+        />
+      )}
     </main>
   );
 };
 
-export default Meal
+export default Meal;
