@@ -8,6 +8,14 @@ import { AiFillYoutube } from 'react-icons/ai';
 import { BsJournalBookmark } from 'react-icons/bs';
 import { GiChefToque } from 'react-icons/gi';
 import { TailSpin } from 'react-loader-spinner';
+import { styled } from '@mui/material/styles';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell, { tableCellClasses } from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
 import { fetchMealInfo } from '../../redux/actions/actionCreate';
 import './MealList.scss';
 
