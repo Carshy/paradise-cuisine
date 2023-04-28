@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable react/jsx-boolean-value */
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
@@ -5,7 +7,7 @@ import { useParams } from 'react-router-dom';
 import { AiFillYoutube } from 'react-icons/ai';
 import { BsJournalBookmark } from 'react-icons/bs';
 import { GiChefToque } from 'react-icons/gi';
-import { TailSpin } from "react-loader-spinner";
+import { TailSpin } from 'react-loader-spinner';
 import { fetchMealInfo } from '../../redux/actions/actionCreate';
 import './MealList.scss';
 
@@ -62,7 +64,10 @@ const Meal = () => {
           </section>
 
           <section className="meal__instructions">
-            <h2>Preparations <GiChefToque /></h2>
+            <h2>
+              Preparations
+              <GiChefToque />
+            </h2>
             <div className="meal__instructionsContainer">
               {showMore ? meal.strInstructions : meal.strInstructions.subString(0, 500)}
               <div
@@ -80,18 +85,18 @@ const Meal = () => {
                 <h2>Still Confused?</h2>
                 <div>
                   {isValidString(meal.strYoutube) && (
-                    <a href={meal.strYoutube} target="_blank" ref="norefferrer">
+                    <a href={meal.strYoutube} target="_blank" rel="noreferrer">
                       <AiFillYoutube/>
                     </a>
                   )}
                   {isValidString(meal.strYoutube) && (
-                    <a href={meal.strYoutube} target="_blank" ref="norefferrer">
+                    <a href={meal.strYoutube} target="_blank" rel="noreferrer">
                       <BsJournalBookmark />
                     </a>
                   )}
                 </div>
               </section>
-            )}
+          )}
         </>
       ) : (
         <TailSpin
