@@ -19,6 +19,33 @@ import Paper from '@mui/material/Paper';
 import { fetchMealInfo } from '../../redux/actions/actionCreate';
 import './MealList.scss';
 
+const StyledTableCell = styled(TableCell)(({ theme }) => ({
+  [`&.${tableCellClasses.head}`]: {
+    backgroundColor: theme.palette.common.white,
+    color: '#6f4b0c',
+    fontWeight: '900',
+    textTransform: 'uppercase',
+    fontSize: '1.05em',
+    border: '0',
+    padding: '.5em 1em',
+  },
+  [`&.${tableCellClasses.body}`]: {
+    fontSize: '1em',
+    border: '0',
+    padding: '.5em 1em',
+  },
+}));
+
+const StyledTableRow = styled(TableRow)(() => ({
+  '&:nth-of-type(odd)': {
+    backgroundColor: '#c0841d14',
+  },
+  // hide last border
+  '&:last-child td, &:last-child th': {
+    border: 0,
+  },
+}));
+
 function createData(ingredient, measurement) {
   return { ingredient, measurement };
 }
@@ -26,10 +53,13 @@ function createData(ingredient, measurement) {
 const Meal = () => {
   const [showMore, setShowMore] = useState(false);
 
+  const meal = useSelector((state) => state.meal);
+  const rows = [
+    ...getIngredientMaterials(meal).map((pair) => createData(pair[0], pair[1])),
+  ];
+
   const dispatch = useDispatch();
   const params = useParams();
-
-  const meal = useSelector((state) => state.meal);
 
   useEffect(() => {
     dispatch(fetchMealInfo(params.meal));
