@@ -139,11 +139,16 @@ const HomeRow = ({ category }) => {
     placeItems: 'center',
   };
 
+  const homeRowStyles = {
+    overflowX: 'scroll',
+    display: 'flex',
+  };
+
   return (
     <Reveal triggerOnce keyframes={flipAnimation} cascade fraction={0.5}>
       <section className="app__homeRow">
         <h2>{category.name}</h2>
-        <div className="homeRow__items" style={category.meals ? {} : homeRowLoadingStyles}>
+        <div className="homeRow__items" style={{ ...homeRowStyles, ...(category.meals ? {} : homeRowLoadingStyles) }}>
           {category.meals && category.meals.length > 0 ? (
             category.meals.map((meal) => (
               <MealCard meal={meal} key={meal.idMeal} />
