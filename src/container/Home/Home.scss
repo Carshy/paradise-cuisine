@@ -2,3 +2,14 @@
   height: 100vh;
   padding-top: 6rem;
 }
+
+.app__homeRow {
+  width: 96%;
+  margin: 0 auto;
+  background: #fff;
+
+  .homeRow__items {
+    display: flex;
+    overflow: hidden;
+  }
+}

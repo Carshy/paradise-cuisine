@@ -12,7 +12,6 @@ const Home = () => {
   const [categoryNamesLoaded, setCategoryNamesLoaded] = useState(false);
 
   const categories = useSelector((state) => state.categories);
-  // console.log('Categories:', categories);
   const appState = useSelector((state) => state.appState);
 
   useEffect(() => {
