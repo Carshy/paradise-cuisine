@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import Nav from './components/Nav/Nav';
 import Home from './container/Home/Home';
 import MealList from './container/Meal/MealList';
+import Meal from './container/Meal/Meal';
 import Ingredients from './container/Ingredients/Ingredients';
 import store from './redux/configureStore';
 
@@ -42,6 +43,7 @@ const App = () => {
             )}
             {/* <Route path="/areas" element={<Areas />} />
             <Route path="/areas/:area" element={<MealList />} /> */}
+            <Route path="/meal/:meal" element={<Meal />} />
           </Routes>
         </div>
       </Router>

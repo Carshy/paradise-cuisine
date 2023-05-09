@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { v4 } from 'uuid';
@@ -9,7 +10,6 @@ const Home = () => {
   const dispatch = useDispatch();
 
   const [categoryNamesLoaded, setCategoryNamesLoaded] = useState(false);
-  const [categoriesLoaded, setCategoriesLoaded] = useState(false);
 
   const categories = useSelector((state) => state.categories);
   // console.log('Categories:', categories);
@@ -22,18 +22,12 @@ const Home = () => {
       dispatch(fetchCategoryNames());
       setCategoryNamesLoaded(true);
     }
-  }, [appState, categoriesLoaded, categoryNamesLoaded, dispatch]);
-
-  useEffect(() => {
-    if (!categoriesLoaded && categories.length) {
-      const shouldLoadCategories = categories.every((category) => category.meals);
-      if (shouldLoadCategories) {
-        dispatch(loadCategories(categories));
-        dispatch(updateCategoriesLoaded());
-        setCategoriesLoaded(true);
-      }
+    if (categories.length) {
+      dispatch(loadCategories(categories));
+      dispatch(updateCategoriesLoaded());
     }
-  }, [categories, categoriesLoaded, dispatch]);
+  }, [appState.categoriesLoaded, categories, categoryNamesLoaded, dispatch]);
+
   return (
     <div>
       <div className="app__home">

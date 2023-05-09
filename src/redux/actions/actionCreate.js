@@ -32,6 +32,7 @@ const fetchCategories = async (categories) => {
 };
 
 // Define the async thunk to load categories
+
 export const loadCategories = createAsyncThunk(
   actionType.LOAD_CATEGORIES,
   async (categories) => {

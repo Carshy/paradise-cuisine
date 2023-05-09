@@ -1,3 +1,4 @@
+/* eslint-disable operator-linebreak */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable react/jsx-boolean-value */
@@ -16,9 +17,9 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import { getIngredientMaterials, isValidString } from "../utils/utils";
+import { getIngredientMaterials, isValidString } from '../Utils/Utils';
 import { fetchMealInfo } from '../../redux/actions/actionCreate';
-import './MealList.scss';
+import './Meal.scss';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -77,24 +78,24 @@ const Meal = () => {
           <section className="meal__measurements">
             <h2>Requirements</h2>
             <div>
-              <TableContainer className="meal__measurementsContainer" component={paper}>
+              <TableContainer className="meal__measurementsContainer" component={Paper}>
                 <Table sx={{ minWidth: 100 }} aria-label="measurements table">
                   <TableHead>
                     <TableRow>
-                      <styledTableCell>Ingredients</styledTableCell>
-                      <styledTableCell>Measurements</styledTableCell>
+                      <StyledTableCell>Ingredients</StyledTableCell>
+                      <StyledTableCell>Measurements</StyledTableCell>
                     </TableRow>
                   </TableHead>
                   <TableBody>
                     {rows.map((row) => (
-                      <styledTableRow key={row.ingredient}>
-                        <styledTableCell component="th" scope="row">
+                      <StyledTableRow key={row.ingredient}>
+                        <StyledTableCell component="th" scope="row">
                           {row.ingredient}
-                        </styledTableCell>
-                        <styledTableCell>
+                        </StyledTableCell>
+                        <StyledTableCell>
                           {row.measurement}
-                        </styledTableCell>
-                      </styledTableRow>
+                        </StyledTableCell>
+                      </StyledTableRow>
                     ))}
                   </TableBody>
                 </Table>
@@ -125,7 +126,7 @@ const Meal = () => {
                 <div>
                   {isValidString(meal.strYoutube) && (
                     <a href={meal.strYoutube} target="_blank" rel="noreferrer">
-                      <AiFillYoutube/>
+                      <AiFillYoutube />
                     </a>
                   )}
                   {isValidString(meal.strYoutube) && (
