@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { formatString } from '../Utils/Utils';
 import { clearMealInfo } from '../../redux/actions/actionCreate';
+import './Home.scss';
 
 const MealCard = ({ meal }) => {
   const dispatch = useDispatch();
