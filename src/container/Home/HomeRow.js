@@ -121,6 +121,7 @@ import { keyframes } from '@emotion/react';
 import Reveal from 'react-awesome-reveal';
 import MealCard from './MealCard';
 import { Meal } from '../Models/Models';
+import './Home.scss';
 
 const flipAnimation = keyframes`
   from {
