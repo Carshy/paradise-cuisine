@@ -8,63 +8,56 @@
   margin: 0 auto;
   background: #fff;
   // margin-bottom: 1em;
-  border-radius: 0.5em;
+  // border-radius: 0.5em;
   box-shadow: 0 0 1em #000;
+
+  h2 {
+    padding: 0.5em 1em;
+    color: #67a01c;
+  }
+
+  .homeRow__items > * {
+    display: flex;
+    align-items: flex-end;
+    padding: 1em;
+    cursor: pointer;
+    transition: aspect-ratio 0.5s ease, box-shadow 0.25s ease-out;
+  }
+
+  .homeRow__items > * > .mealCard__content {
+    display: flex;
+    gap: 1.5em;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(2.5em);
+    transition: 0s ease-in;
+  }
+
+  .homeRow__items > *:hover > .mealCard__content {
+    transform: translateY(0);
+    opacity: 1;
+    transition: 0.5s ease-out;
+  }
+
+  .homeRow__items > * > .mealCard__content > .mealCard__arrow {
+    font-size: 2em;
+    padding: 0.25em;
+    background-color: transparent;
+    border-radius: 0.1em;
+    transform: translateX(-1em);
+    opacity: 0;
+    transition: 0.25s ease-out;
+  }
 }
 
-.app__homeRow > h2 {
-  background: #fff;
-  padding: 0.5em 1em;
-  color: #895c0f;
-}
 
-.homeRow__items {
-  display: flex;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  height: 15em;
-  background: rgba(255, 255, 255, 0.5);
-}
-
-.homeRow__items > * {
-  display: flex;
-  align-items: flex-end;
-  padding: 1em;
-  cursor: pointer;
-  transition: aspect-ratio 0.5s ease, box-shadow 0.25s ease-out;
-}
-
-.homeRow__items > * > .mealCard__content {
-  display: flex;
-  gap: 1.5em;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  opacity: 0;
-  transform: translateY(2.5em);
-  transition: 0s ease-in;
-}
-
-.homeRow__items > *:hover > .mealCard__content {
-  transform: translateY(0);
-  opacity: 1;
-  transition: 0.5s ease-out;
-}
-
-.homeRow__items > * > .mealCard__content > .mealCard__arrow {
-  font-size: 2em;
-  padding: 0.25em;
-  background-color: transparent;
-  border-radius: 0.1em;
-  transform: translateX(-1em);
-  opacity: 0;
-  transition: 0.25s ease-out;
-}
 
 .homeRow__items > *:hover > .mealCard__content > .mealCard__arrow {
   transition: opacity 0.75s 0s ease, background-color 1s 0s ease,
     transform 0.5s 0.25s ease, box-shadow 0.25s ease;
-  background: #bf841d;
+  background: #67a01c;
   opacity: 1;
   transform: translateX(0);
 }
@@ -83,11 +76,11 @@
 }
 
 .homeRow__items > *:hover > .mealCard__content > .mealCard__arrow:hover {
-  transform: scale(1.1);
+  transform: scale(1.3);
   -moz-box-shadow: 0 0 0.25em #00000050;
   -webkit-box-shadow: 0 0 0.25em #00000050;
   box-shadow: 0 0 0.25em #00000050;
-  transition: 0.25s ease-in;
+  transition: 0.25s ease-in-out;
 }
 
 @media screen and (max-width: 700px) {

@@ -143,6 +143,7 @@ const HomeRow = ({ category }) => {
   const homeRowStyles = {
     overflowX: 'scroll',
     display: 'flex',
+    background: 'rgba(255, 255, 255, 0.5)',
   };
 
   return (
