@@ -18,7 +18,7 @@ const Nav = () => {
 
   window.addEventListener('scroll', navScroll);
   return (
-    <div>
+    <div className="nav-section">
       <nav className={fix ? 'navbar fixed' : 'navbar'}>
         <a className="nav-link" href="/">
           {/* <img className="rocket-logo" src={logo1} alt="logo1" /> */}

@@ -1,13 +1,17 @@
+html, body {
+  height: 100%;
+}
 .app__home {
-  height: 100vh;
-  padding-top: 6rem;
+  min-height: 100%;
+  background-color: #67a01c;
+  padding-top: 2rem;
 }
 
 .app__homeRow {
   width: 96%;
   margin: 0 auto;
   background: #fff;
-  // margin-bottom: 1em;
+  // margin-bottom: 0.5em;
   // border-radius: 0.5em;
   box-shadow: 0 0 1em #000;
 
@@ -30,8 +34,8 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    opacity: 0;
-    transform: translateY(2.5em);
+    opacity: 1;
+    transform: translateY(1em);
     transition: 0s ease-in;
   }
 

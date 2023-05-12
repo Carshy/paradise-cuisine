@@ -109,7 +109,7 @@ const Meal = () => {
               <GiChefToque />
             </h2>
             <div className="meal__instructionsContainer">
-              {showMore ? meal.strInstructions : meal.strInstructions.subString(0, 500)}
+              {showMore ? meal.strInstructions : meal.strInstructions.substring(0, 500)}
               <div
                 onClick={() => {
                   setShowMore((prevState) => !prevState);
@@ -129,8 +129,8 @@ const Meal = () => {
                       <AiFillYoutube />
                     </a>
                   )}
-                  {isValidString(meal.strYoutube) && (
-                    <a href={meal.strYoutube} target="_blank" rel="noreferrer">
+                  {isValidString(meal.strSource) && (
+                    <a href={meal.strSource} target="_blank" rel="noreferrer">
                       <BsJournalBookmark />
                     </a>
                   )}
