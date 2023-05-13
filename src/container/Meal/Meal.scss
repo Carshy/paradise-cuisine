@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Kalam:wght@300;400;700&display=swap');
+
 .app__meal {
   .meal__header {
     background: #67a01c;
@@ -73,11 +75,11 @@
       gap: 0.5em;
 
       :nth-child(1)::after {
-        content: "youtube";
+        content: "Youtube";
       }
 
       :nth-child(2)::after {
-        content: "cookbook";
+        content: "Cookbook";
       }
 
       a::after {
