@@ -40,7 +40,7 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
 
 const StyledTableRow = styled(TableRow)(() => ({
   '&:nth-of-type(odd)': {
-    backgroundColor: '#c0841d14',
+    backgroundColor: '#8cc0511b',
   },
   // hide last border
   '&:last-child td, &:last-child th': {
