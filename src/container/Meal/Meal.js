@@ -24,7 +24,7 @@ import './Meal.scss';
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
     backgroundColor: theme.palette.common.white,
-    color: '#6f4b0c',
+    color: '#3e5c1c',
     fontWeight: '900',
     textTransform: 'uppercase',
     fontSize: '1.05em',
