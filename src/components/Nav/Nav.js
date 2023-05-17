@@ -21,7 +21,7 @@ const Nav = () => {
     <div className="nav-section">
       <nav className={fix ? 'navbar fixed' : 'navbar'}>
         <NavLink className="nav-link" to="/">
-          <span className="text-logo">Home-Delicacy Cuisine</span>
+          <span className="text-logo">Paradise Cuisine</span>
         </NavLink>
         <ul className="nav-group">
           <li>
