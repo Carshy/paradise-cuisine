@@ -20,10 +20,9 @@ const Nav = () => {
   return (
     <div className="nav-section">
       <nav className={fix ? 'navbar fixed' : 'navbar'}>
-        <a className="nav-link" href="/">
-          {/* <img className="rocket-logo" src={logo1} alt="logo1" /> */}
-          <span className="text-logo">Home-Style Cuisine</span>
-        </a>
+        <NavLink className="nav-link" to="/">
+          <span className="text-logo">Home-Delicacy Cuisine</span>
+        </NavLink>
         <ul className="nav-group">
           <li>
             <NavLink to="/" className="nav-item">
