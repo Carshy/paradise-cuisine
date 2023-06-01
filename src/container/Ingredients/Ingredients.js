@@ -1,10 +1,11 @@
+/* eslint-disable max-len */
 /* eslint-disable implicit-arrow-linebreak */
 /* eslint-disable operator-linebreak */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { v4 } from 'uuid';
+import { v4 as uuidv4 } from 'uuid';
 import { useNavigate, useOutlet } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import {
@@ -20,12 +21,11 @@ const Ingredients = ({ mediaWidth }) => {
   const [searchValue, setSearchValue] = useState('');
   const [currentPageIng, setCurrentPageIng] = useState('none');
 
-  const navigate = useNavigate;
+  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const appState = useSelector((state) => state.appState);
-  const { mealListLoaded } = useSelector((state) => state.appState);
-  let ingredients = useSelector((state) => state.ingredients);
+  const ingredients = useSelector((state) => state.ingredients);
 
   const outlet = useOutlet();
 
@@ -35,13 +35,23 @@ const Ingredients = ({ mediaWidth }) => {
     dispatch(updateIngredientsLoaded());
   }, [dispatch, appState.ingredientsLoaded]);
 
-  ingredients = ingredients.filter((ingredient) =>
-    ingredient.name.toLowerCase().includes(searchValue.toLowerCase()));
-
   const ingredientsStyles = {
     display: 'flex',
     flexWrap: 'wrap',
     gap: '.5em',
+  };
+
+  const handleIngredientClick = (ingredient) => {
+    console.log('Clicked on Ingredient:', ingredient);
+    if (formatString(ingredient.name) !== (appState.mealListLoaded.name || currentPageIng)) {
+      dispatch(clearMealList());
+      dispatch(updateMealListLoaded({
+        name: formatString(ingredient.name),
+        base: 'i',
+      }));
+      setCurrentPageIng(formatString(ingredient.name));
+      navigate(`./${formatString(ingredient.name)}`);
+    }
   };
 
   return (
@@ -60,36 +70,20 @@ const Ingredients = ({ mediaWidth }) => {
 
         <div className="ingredients__container" style={ingredientsStyles}>
           {searchValue.length > 0 &&
-            ingredients.map((ingredient) => (
-              <span
-                key={v4()}
-                className="ingredient"
-                onClick={() => {
-                  if (
-                    formatString(ingredient.name) !==
-                    (mealListLoaded.name && currentPageIng)
-                  ) {
-                    dispatch(clearMealList());
-                    dispatch(
-                      updateMealListLoaded({
-                        name: formatString(ingredient.name),
-                        base: 'i',
-                      }),
-                    );
-                    setCurrentPageIng(formatString(ingredient.name));
-                    navigate(`./${formatString(ingredient.name)}`);
-                  }
-                }}
-              >
-                {ingredient.name}
-              </span>
-            ))}
+            ingredients.filter((ingredient) => ingredient.name.toLowerCase().includes(searchValue.toLowerCase()))
+              .map((ingredient) => (
+                <span
+                  key={uuidv4()}
+                  className="ingredient"
+                  onClick={() => handleIngredientClick(ingredient)}
+                >
+                  {ingredient.name}
+                </span>
+              ))}
 
           {searchValue.length <= 0 && (
-            <h3
-              style={{ textAlign: 'center', width: '100%', color: '#543a0d' }}
-            >
-              Please input at least a letter to search
+            <h3 style={{ textAlign: 'center', width: '100%', color: '#3e5c1c' }}>
+              Input a letter in the search field to find your meal
               <br />
               ...Then click on a searched ingredient
             </h3>
@@ -111,7 +105,7 @@ const Ingredients = ({ mediaWidth }) => {
 };
 
 Ingredients.propTypes = {
-  mediaWidth: PropTypes.string,
-}.isRequired;
+  mediaWidth: PropTypes.number.isRequired,
+};
 
 export default Ingredients;

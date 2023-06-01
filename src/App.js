@@ -17,7 +17,7 @@ const App = () => {
 
   useEffect(() => {
     setMediaWidth(window.innerWidth);
-  }, [setMediaWidth]);
+  }, []);
   return (
     <Provider store={store}>
       <Router>
@@ -25,22 +25,9 @@ const App = () => {
           <Nav mediaWidth={mediaWidth} />
           <Routes>
             <Route element={<Home />} path="/" />
-            {mediaWidth > 700 ? (
-              <Route
-                path="/ingredients/"
-                element={<Ingredients mediaWidth={mediaWidth} />}
-              >
-                <Route path=":ingredient" element={<MealList />} />
-              </Route>
-            ) : (
-              <>
-                <Route
-                  path="/ingredients"
-                  element={<Ingredients mediawidth={mediaWidth} />}
-                />
-                <Route path="/ingredients/:ingredient" element={<MealList />} />
-              </>
-            )}
+            <Route path="/ingredients" element={<Ingredients mediaWidth={mediaWidth} />} />
+
+            <Route path="/ingredients/:ingredient" element={<MealList />} />
             {/* <Route path="/areas" element={<Areas />} />
             <Route path="/areas/:area" element={<MealList />} /> */}
             <Route path="/meal/:meal" element={<Meal />} />
