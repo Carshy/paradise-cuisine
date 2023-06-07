@@ -20,9 +20,9 @@ const Nav = () => {
   return (
     <div className="nav-section">
       <nav className={fix ? 'navbar fixed' : 'navbar'}>
-        <NavLink className="nav-link" to="/">
+        <a className="nav-link" href="/">
           <span className="text-logo">Paradise Cuisine</span>
-        </NavLink>
+        </a>
         <ul className="nav-group">
           <li>
             <NavLink to="/" className="nav-item">

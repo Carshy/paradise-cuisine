@@ -97,6 +97,7 @@ import { SiCoffeescript } from 'react-icons/si';
 import { TailSpin } from 'react-loader-spinner';
 import { fetchMealList, clearMealInfo } from '../../redux/actions/actionCreate';
 import { formatString } from '../Utils/Utils';
+import './MealList.scss';
 
 const MealList = () => {
   const [mediaWidth, setMediaWidth] = useState(0);

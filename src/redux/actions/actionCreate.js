@@ -80,7 +80,7 @@ export const fetchIngredients = createAsyncThunk(
 
 // *********** Areas ******************************
 
-// define forma areas
+// define format areas
 const formatAreas = (areas) => {
   const formattedAreas = areas.map((area) => ({
     name: area.strArea,

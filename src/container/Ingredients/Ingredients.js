@@ -38,7 +38,7 @@ const Ingredients = ({ mediaWidth }) => {
   const ingredientsStyles = {
     display: 'flex',
     flexWrap: 'wrap',
-    gap: '.5em',
+    gap: '.8em',
   };
 
   const handleIngredientClick = (ingredient) => {

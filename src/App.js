@@ -7,6 +7,7 @@ import Home from './container/Home/Home';
 import MealList from './container/Meal/MealList';
 import Meal from './container/Meal/Meal';
 import Ingredients from './container/Ingredients/Ingredients';
+import Areas from './container/Areas/Areas';
 import store from './redux/configureStore';
 
 const App = () => {
@@ -28,8 +29,8 @@ const App = () => {
             <Route path="/ingredients" element={<Ingredients mediaWidth={mediaWidth} />} />
 
             <Route path="/ingredients/:ingredient" element={<MealList />} />
-            {/* <Route path="/areas" element={<Areas />} />
-            <Route path="/areas/:area" element={<MealList />} /> */}
+            <Route path="/areas" element={<Areas />} />
+            <Route path="/areas/:area" element={<MealList />} />
             <Route path="/meal/:meal" element={<Meal />} />
           </Routes>
         </div>
