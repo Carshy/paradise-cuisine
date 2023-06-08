@@ -1,0 +1,27 @@
+html,
+body {
+  height: 100%;
+}
+
+.app__areas {
+  background: rgba(103, 160, 28, 0.8);
+  min-height: 100%;
+  padding: 2em 1em;
+//   min-width: 125em;
+  margin-inline: auto;
+
+  .app__area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    margin-bottom: 0.5em;
+    background-color: #fff;
+    color: #3e5c1c;
+    border-radius: 0.5em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+
+    transition: transform 0.25s ease-out, box-shadow 0.25s ease-out,
+      background-color 0.25s ease-in;
+  }
+}

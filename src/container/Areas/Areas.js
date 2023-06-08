@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { v4 } from 'uuid';
 import { IoArrowForwardOutline } from 'react-icons/io5';
 import { clearMealInfo, fetchAreas, updateAreasLoaded } from '../../redux/actions/actionCreate';
+import './Areas.scss';
 
 const Areas = () => {
   const dispatch = useDispatch();
@@ -15,20 +16,20 @@ const Areas = () => {
   const appState = useSelector((state) => state.appState);
 
   useEffect(() => {
-    if (appState.areasLoaded) return;
+    if (appState.updateAreasLoaded) return;
     dispatch(fetchAreas());
     dispatch(updateAreasLoaded);
-  }, [appState.areasLoaded, dispatch]);
+  }, [appState.updateAreasLoaded, dispatch]);
   return (
-    <main>
+    <main className="app__areas">
       {areas.map((area) => (
-        <div key={v4()}>
+        <div className="app__area" key={v4()}>
           <h2>{area.name}</h2>
           <div
             className="area__forward"
             onClick={() => {
               dispatch(clearMealInfo());
-              navigate(`${area.name.toLowerCase()}`);
+              navigate(`./${area.name.toLowerCase()}`);
             }}
           >
             <IoArrowForwardOutline />
