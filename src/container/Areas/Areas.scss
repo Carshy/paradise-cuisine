@@ -7,7 +7,7 @@ body {
   background: rgba(103, 160, 28, 0.8);
   min-height: 100%;
   padding: 2em 1em;
-//   min-width: 125em;
+  //   min-width: 125em;
   margin-inline: auto;
 
   .app__area {
@@ -23,5 +23,12 @@ body {
 
     transition: transform 0.25s ease-out, box-shadow 0.25s ease-out,
       background-color 0.25s ease-in;
+
+    &:hover {
+      transform: scale(0.985);
+      box-shadow: 0 0 0.5em rgba(103, 160, 28, 0.7),
+        inset 0 0.5em 0.35em rgba(103, 160, 28, 0.2), inset 0 -0.5em 0.35em rgba(103, 160, 28, 0.2);
+      background-color: #fffbf5;
+    }
   }
 }
