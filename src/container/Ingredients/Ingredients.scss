@@ -20,16 +20,19 @@
         outline: none;
 
         &:focus {
-          box-shadow: 0 0 0.5em #67a01cf9,
+          box-shadow:
+            0 0 0.5em #67a01cf9,
             inset 0 0 0 0.1em rgba(255, 255, 255, 0.5) !important;
         }
 
         &::placeholder {
           color: #67a01cf9;
         }
+
         &:-ms-input-placeholder {
           color: #67a01cf9;
         }
+
         &::-webkit-input-placeholder {
           color: #67a01cf9;
         }
