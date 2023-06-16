@@ -59,11 +59,8 @@ body {
 }
 
 .homeRow__items > *:hover > .mealCard__content > .mealCard__arrow {
-  transition:
-    opacity 0.75s 0s ease,
-    background-color 1s 0s ease,
-    transform 0.5s 0.25s ease,
-    box-shadow 0.25s ease;
+  transition: opacity 0.75s 0s ease, background-color 1s 0s ease,
+    transform 0.5s 0.25s ease, box-shadow 0.25s ease;
   background: #67a01c;
   opacity: 1;
   transform: translateX(0);
