@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Kalam:wght@300;400;700&display=swap");
+
+.app__meal {
+  .meal__header {
+    background: #67a01c;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    color: #fff;
+    padding: 1em;
+
+    h1 {
+      font-weight: 900;
+    }
+
+    span {
+      background: rgba(255, 255, 255, 0.947);
+      padding: 0.25em 0.5em;
+      border-radius: 0.25em;
+      color: #67a01cf9;
+      cursor: pointer;
+    }
+  }
+
+  section {
+    padding: 1em;
+
+    h2 {
+      position: relative;
+      color: #3e5c1c;
+      margin-bottom: 1em;
+      width: fit-content;
+
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+      border-bottom: 3px solid #3e5c1c;
+    }
+
+    div {
+      .meal__measurementsContainer {
+        display: grid;
+        box-shadow: 0 0 0.75em #67a01cf9 !important;
+      }
+    }
+  }
+
+  .meal__instructions {
+    .meal__instructionsContainer {
+      position: relative;
+      line-height: 1.5em;
+      font-size: 1.25em;
+      font-family: "Kalam", cursive;
+      background-color: #8cc0511b;
+      padding: 0.5em;
+
+      div {
+        cursor: pointer;
+        color: #67a01c;
+        font-weight: 700;
+        margin-inline: 0.5em;
+        user-select: none;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+          color: #67a01cf9;
+          text-decoration: underline;
+          font-size: 1.2em;
+        }
+      }
+    }
+  }
+
+  .meal__help {
+    div {
+      display: flex;
+      gap: 0.5em;
+      margin-bottom: 2em;
+
+      :nth-child(1)::after {
+        content: "Youtube";
+      }
+
+      :nth-child(2)::after {
+        content: "Cookbook";
+      }
+
+      a::after {
+        opacity: 0;
+
+        transition: 0.25s ease;
+      }
+
+      a:hover::after {
+        opacity: 1;
+      }
+
+      a :first-child {
+        font-size: 2em;
+      }
+
+      a {
+        color: #67a01c;
+        text-decoration: none;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &:hover {
+          box-shadow: inset 0 75em rgba(103, 160, 28, 0.8);
+          padding: 0.5em 0.5em;
+          color: #fff;
+          background: rgba(255, 255, 255, 0.484);
+          transition: 0.3s ease-in-out;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .meal__header > h1 {
+    font-size: 1.75em;
+  }
+  .meal__instructionsContainer {
+    font-size: 0.95em;
+  }
+}

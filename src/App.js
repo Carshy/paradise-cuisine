@@ -1,26 +1,41 @@
-import React from 'react';
-import { Provider } from 'react-redux';
+import React, { useState, useEffect } from 'react';
+import './App.scss';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import Home from './container/Home/Home';
+import Nav from './components/Nav/Nav';
+import Ingredients from './container/Ingredients/Ingredients';
+import MealList from './container/Meal/MealList';
+import Meal from './container/Meal/Meal';
+import Areas from './container/Areas/Areas';
 import store from './redux/configureStore';
-import Animals from './components/Animals/Animals';
-import AnimalDetails from './components/Animals/AnimalDetails';
-import Header from './components/Header/Header';
-// import Dropdown from './components/Animals/Dropdown';
 
-function App() {
+const App = () => {
+  const [mediaWidth, setMediaWidth] = useState(0);
+  window.addEventListener('resize', () => {
+    setMediaWidth(window.innerWidth);
+  });
+
+  useEffect(() => {
+    setMediaWidth(window.innerWidth);
+  }, []);
   return (
     <Provider store={store}>
       <Router>
         <div className="App">
-          <Header />
+          <Nav mediaWidth={mediaWidth} />
           <Routes>
-            <Route element={<Animals />} path="/" />
-            <Route element={<AnimalDetails />} path="/details/:id" />
+            <Route path="/" element={<Home />} />
+            <Route path="/ingredients" element={<Ingredients mediaWidth={mediaWidth} />} />
+            <Route path="/ingredients/:ingredient" element={<MealList />} />
+            <Route path="/areas" element={<Areas />} />
+            <Route path="/areas/:area" element={<MealList />} />
+            <Route path="/meal/:meal" element={<Meal />} />
           </Routes>
         </div>
       </Router>
     </Provider>
   );
-}
+};
 
 export default App;

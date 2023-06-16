@@ -1,10 +1,19 @@
-import { configureStore } from '@reduxjs/toolkit';
-import { combineReducers } from 'redux';
+import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import thunk from 'redux-thunk';
-import animalReducer from './animalia/animalia';
+import categoriesReducer from './categories/categories';
+import mealListReducer from './mealList/mealList';
+import mealInfoReducer from './meal/mealInfo';
+import ingredientReducer from './ingredients/ingredients';
+import areasReducer from './areas/areas';
+import appStateReducer from './appState/appState';
 
 const rootReducer = combineReducers({
-  animals: animalReducer,
+  categories: categoriesReducer,
+  mealList: mealListReducer,
+  meal: mealInfoReducer,
+  ingredients: ingredientReducer,
+  areas: areasReducer,
+  appState: appStateReducer,
 });
 
 const store = configureStore({

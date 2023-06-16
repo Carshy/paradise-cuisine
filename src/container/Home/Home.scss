@@ -1,0 +1,115 @@
+html, body {
+  height: 100%;
+}
+.app__home {
+  min-height: 100%;
+  background-color: #67a01c;
+  padding-top: 2rem;
+}
+
+.app__homeRow {
+  width: 96%;
+  margin: 0 auto;
+  background: #fff;
+  // margin-bottom: 0.5em;
+  // border-radius: 0.5em;
+  box-shadow: 0 0 1em #000;
+
+  h2 {
+    padding: 0.5em 1em;
+    color: #3e5c1c;
+  }
+
+  .homeRow__items > * {
+    display: flex;
+    align-items: flex-end;
+    padding: 1em;
+    cursor: pointer;
+    transition: aspect-ratio 0.5s ease, box-shadow 0.25s ease-out;
+  }
+
+  .homeRow__items > * > .mealCard__content {
+    display: flex;
+    gap: 1.5em;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    opacity: 1;
+    transform: translateY(1em);
+    transition: 0s ease-in;
+  }
+
+  .homeRow__items > *:hover > .mealCard__content {
+    transform: translateY(0);
+    opacity: 1;
+    transition: 0.5s ease-out;
+  }
+
+  .homeRow__items > * > .mealCard__content > .mealCard__arrow {
+    font-size: 2em;
+    padding: 0.25em;
+    background-color: transparent;
+    border-radius: 0.1em;
+    transform: translateX(-1em);
+    opacity: 0;
+    transition: 0.25s ease-out;
+  }
+}
+
+
+
+.homeRow__items > *:hover > .mealCard__content > .mealCard__arrow {
+  transition: opacity 0.75s 0s ease, background-color 1s 0s ease,
+    transform 0.5s 0.25s ease, box-shadow 0.25s ease;
+  background: #67a01c;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.homeRow__items > *:hover {
+  aspect-ratio: 2;
+  -moz-box-shadow: inset 0 15em rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset 0 15em rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 15em rgba(0, 0, 0, 0.5);
+}
+
+.homeRow__items > *:hover > .mealCard__content > .mealCard__title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.homeRow__items > *:hover > .mealCard__content > .mealCard__arrow:hover {
+  transform: scale(1.3);
+  -moz-box-shadow: 0 0 0.25em #00000050;
+  -webkit-box-shadow: 0 0 0.25em #00000050;
+  box-shadow: 0 0 0.25em #00000050;
+  transition: 0.25s ease-in-out;
+}
+
+@media screen and (max-width: 700px) {
+  .homeRow {
+    font-size: 0.6em;
+    border-radius: 0;
+    margin-bottom: 0;
+  }
+
+  .homeRow > h2 {
+    font-size: 1.75em;
+  }
+
+  .homeRow__items > * > .mealCard__content > h3 {
+    font-size: 1.75em;
+  }
+}
+
+.app__mealCard {
+  -moz-box-shadow: inset 0 15em rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 0 15em rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 15em rgba(0, 0, 0, 0.2);
+  height: 15em;
+  background-size: cover !important;
+  background-position: center !important;
+  aspect-ratio: 1;
+  color: #fff;
+}
