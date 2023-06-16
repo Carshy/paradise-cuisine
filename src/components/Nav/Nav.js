@@ -83,7 +83,6 @@
 import React, { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
-// import Logo from '../images/Logo.png';
 import { VscMenu } from 'react-icons/vsc';
 import { AiOutlineClose } from 'react-icons/ai';
 import './Nav.scss';
@@ -100,7 +99,7 @@ const Nav = ({ mediaWidth }) => {
         }}
       >
         <h2 className="nav__logoImg">
-          {mediaWidth > 700 && <p>Lavish Cuisine</p>}
+          {mediaWidth > 700 && <p>Paradise Cuisine</p>}
         </h2>
       </div>
       {mediaWidth <= 500 && (
