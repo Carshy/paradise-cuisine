@@ -65,6 +65,16 @@
   color: rgba(103, 160, 28, 1);
 }
 
+@media screen and (min-width: 700px) {
+  .nav__toggleOpen {
+    display: none;
+  }
+
+  .nav__toggleClose {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .nav {
     font-size: 1.1em;

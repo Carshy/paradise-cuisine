@@ -160,7 +160,7 @@ const HomeRow = ({ category }) => {
               height="150"
               width="150"
               radius="9"
-              color="#c0841d"
+              color="rgba(103, 160, 28, 1)"
               ariaLabel="three-dots-loading"
               wrapperStyle={{}}
               visible={true}

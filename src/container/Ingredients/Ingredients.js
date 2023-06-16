@@ -42,7 +42,6 @@ const Ingredients = ({ mediaWidth }) => {
   };
 
   const handleIngredientClick = (ingredient) => {
-    console.log('Clicked on Ingredient:', ingredient);
     if (formatString(ingredient.name) !== (appState.mealListLoaded.name || currentPageIng)) {
       dispatch(clearMealList());
       dispatch(updateMealListLoaded({
