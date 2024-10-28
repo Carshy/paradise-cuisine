@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { VscMenu } from 'react-icons/vsc';
@@ -11,14 +11,28 @@ import './Nav.scss';
 
 const Nav = ({ mediaWidth }) => {
   const [navActive, setNavActive] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header className="nav">
+    <header className={`nav ${scrolled ? 'nav--scrolled' : ''}`}>
       <div
         className="nav__logo"
-        onClick={() => {
-          navigate('/');
-        }}
+        onClick={() => navigate('/')}
       >
         <h2 className="nav__logoImg">
           {mediaWidth > 700 && <p>Cuisine Delight</p>}
@@ -27,9 +41,7 @@ const Nav = ({ mediaWidth }) => {
       {mediaWidth <= 500 && (
         <VscMenu
           className="nav__toggleOpen"
-          onClick={() => {
-            setNavActive(true);
-          }}
+          onClick={() => setNavActive(true)}
         />
       )}
       <nav
