@@ -21,7 +21,7 @@ const Nav = ({ mediaWidth }) => {
         }}
       >
         <h2 className="nav__logoImg">
-          {mediaWidth > 700 && <p>Paradise Cuisine</p>}
+          {mediaWidth > 700 && <p>Cuisine Delight</p>}
         </h2>
       </div>
       {mediaWidth <= 500 && (
