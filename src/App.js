@@ -3,6 +3,7 @@ import './App.scss';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import Home from './container/Home/Home';
+import HomePage from './container/Home/HomePage';
 import Nav from './components/Nav/Nav';
 import Ingredients from './container/Ingredients/Ingredients';
 import MealList from './container/Meal/MealList';
@@ -25,7 +26,8 @@ const App = () => {
         <div className="App">
           <Nav mediaWidth={mediaWidth} />
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<HomePage />} />
+            <Route path="/meals" element={<Home />} />
             <Route path="/ingredients" element={<Ingredients mediaWidth={mediaWidth} />} />
             <Route path="/ingredients/:ingredient" element={<MealList />} />
             <Route path="/areas" element={<Areas />} />

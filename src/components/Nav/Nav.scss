@@ -8,9 +8,9 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background: #fff;
-  box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.3);
-  height: 5em;
+  // background: #fff;
+  // box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.3);
+  height: 4em;
 }
 
 .nav__logo {
@@ -26,7 +26,7 @@
 .nav__logo p {
   font-family: "Tangerine", cursive;
   font-size: 1.75em;
-  color: rgba(103, 160, 28, 1);
+  color: #c0841d;
   font-weight: 900;
 }
 
@@ -34,7 +34,7 @@
   position: relative;
   text-transform: uppercase;
   text-decoration: none;
-  color: #3e5c1c;
+  color: #c0841d;
 }
 
 .nav__links a.active::after {
@@ -48,7 +48,7 @@
   left: 0;
   width: 100%;
   height: 0.1em;
-  background: rgba(103, 160, 28, 1);
+  background: #c0841d;
   transform-origin: right;
   transform: scaleX(0);
 
@@ -62,7 +62,7 @@
 
 .nav__toggleOpen {
   font-size: 2em;
-  color: rgba(103, 160, 28, 1);
+  color: #c0841d;
 }
 
 @media screen and (min-width: 700px) {
@@ -94,8 +94,8 @@
   }
 
   .nav__menu.active {
-    backdrop-filter: blur(5px);
-    box-shadow: inset 0 100vh 0 0.05em rgba(0, 0, 0, 0.8);
+    // backdrop-filter: blur(5px);
+    // box-shadow: inset 0 100vh 0 0.05em rgba(0, 0, 0, 0.8);
     pointer-events: all;
 
     transition: box-shadow 0.25s ease-out, backdrop-filter 0.2s ease;
@@ -108,7 +108,7 @@
     justify-content: center;
     height: 100%;
     flex: 0.8;
-    background-color: #fff;
+    background-color: transparent;
     transform: translateX(-100%);
     transition: transform 0.2s ease-out;
   }
