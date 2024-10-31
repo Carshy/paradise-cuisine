@@ -29,7 +29,7 @@ const Nav = ({ mediaWidth }) => {
   }, []);
 
   return (
-    <header className={`nav ${scrolled ? 'nav--scrolled' : ''}`}>
+    <div className={`nav ${scrolled ? 'nav--scrolled' : ''}`}>
       <div
         className="nav__logo"
         onClick={() => navigate('/')}
@@ -61,7 +61,7 @@ const Nav = ({ mediaWidth }) => {
           />
         )}
       </nav>
-    </header>
+    </div>
   );
 };
 
