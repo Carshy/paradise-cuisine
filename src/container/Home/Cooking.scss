@@ -3,6 +3,7 @@
   height: 100vh;
   background: #f5efef;
   padding: 2rem;
+  overflow: hidden; // Ensures no child elements overflow the container
 
   .cooking-title-div {
     display: flex;
@@ -32,6 +33,7 @@
     display: flex;
     gap: 2rem;
     width: 100%;
+    height: 100%;
     padding-top: 2rem;
 
     .app__cooking-right {
