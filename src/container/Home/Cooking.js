@@ -6,7 +6,9 @@ const Cooking = () => {
   const cook = 'WEEKNIGHT COOKING';
   return (
     <div className="app__cooking">
-      <h1 className="cooking-title">{cook}</h1>
+      <div className="cooking-title-div">
+        <h1 className="cooking-title">{cook}</h1>
+      </div>
       <div className="app__cooking-container">
         <div className="app__cooking-right">
           <img className="cooking-img" src={images.weeknight} alt="weeknight" />
