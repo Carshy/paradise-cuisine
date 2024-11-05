@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import './RecipeDetails.scss';
 
 const RecipeDetails = () => {
   const location = useLocation();
   const recipe = location.state; // retrieve the recipe data fromthe state
+
+  // Scroll to the top when the component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   if (!recipe) return <div>No Recipe Data found!</div>;
 
