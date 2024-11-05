@@ -13,8 +13,10 @@ const RecipeDetails = () => {
       <div className="details-img">
         <img className="image-field" src={recipe.photo} alt="recipe pic" />
       </div>
-      <p>{recipe.excerpt}</p>
-      <p>{recipe.details}</p>
+      <div className="details-content">
+        <p className="details-excerpt">{recipe.excerpt}</p>
+        <p className="details-para">{recipe.details}</p>
+      </div>
     </div>
   );
 };
