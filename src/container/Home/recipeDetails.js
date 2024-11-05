@@ -13,7 +13,7 @@ const RecipeDetails = () => {
 
   return (
     <div className="app__recipedetails">
-      <h1>{recipe.title}</h1>
+      <h1 className="details-title">{recipe.title}</h1>
       <div className="details-img">
         <img className="image-field" src={recipe.photo} alt="recipe pic" />
       </div>
