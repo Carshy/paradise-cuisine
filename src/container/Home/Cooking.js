@@ -1,9 +1,15 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { images } from '../../constants';
 import './Cooking.scss';
 
 const Cooking = () => {
+  const navigate = useNavigate();
   const cook = 'WEEKNIGHT COOKING';
+
+  const navigateToDetail = () => {
+    navigate('/recipeDetails/');
+  }
   return (
     <div className="app__cooking">
       <div className="cooking-title-div">
@@ -11,7 +17,11 @@ const Cooking = () => {
       </div>
       <div className="app__cooking-container">
         <div className="app__cooking-right">
-          <img className="cooking-img" src={images.weeknight} alt="weeknight" />
+          <img
+            className="cooking-img"
+            src={images.weeknight}
+            alt="weeknight"
+          />
         </div>
         <div className="app__cooking-left">
           <p>Expert Advice</p>
@@ -23,7 +33,7 @@ const Cooking = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Cooking
+export default Cooking;
