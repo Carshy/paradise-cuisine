@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { images } from '../../constants';
 import './Cooking.scss';
 
 const Cooking = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
   const cook = 'WEEKNIGHT COOKING';
 
+  
   const navigateToDetail = () => {
     navigate('/recipeDetails/');
   }
