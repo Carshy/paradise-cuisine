@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { fetchRecipes } from '../../redux/slices/recipesSlice';
-import { images } from '../../constants';
+// import { images } from '../../constants';
 import './Cooking.scss';
 
 const Cooking = () => {
@@ -29,23 +29,38 @@ const Cooking = () => {
       <div className="cooking-title-div">
         <h1 className="cooking-title">WEEKNIGHT COOKING</h1>
       </div>
-      <div className="app__cooking-container">
-        <div className="app__cooking-right">
-          <img
-            className="cooking-img"
-            src={images.weeknight}
-            alt="weeknight"
-          />
-        </div>
-        <div className="app__cooking-left">
-          <p>Expert Advice</p>
-          <h2>For the Glossiest, Sauciest Sheet-Pan Chicken, Grab a Jar of Jam</h2>
-          <p>
-            With the help of soy sauce, Dijon mustard, and vinegar, a jar of apricot
-            jam transforms chicken legs into a gorgeous weeknight dinner.
-          </p>
-        </div>
-      </div>
+      {
+        recipes.map((recipe) => (
+          <div
+            key={recipe.id}
+            className="app__cooking-container"
+            role="button"
+            tabIndex={0}
+            onClick={() => handleRecipeClick(recipe)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                handleRecipeClick(recipe);
+              }
+            }}
+            style={{ cursor: 'pointer' }}
+          >
+            <div className="app__cooking-right">
+              <img
+                className="cooking-img"
+                src={recipe.photo}
+                alt="weeknight"
+              />
+            </div>
+            <div className="app__cooking-left">
+              <p>Expert Advice</p>
+              <h2>{recipe.title}</h2>
+              <p>
+                {recipe.excerpt}
+              </p>
+            </div>
+          </div>
+        ))
+      }
     </div>
   );
 };

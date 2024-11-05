@@ -8,6 +8,7 @@ import Nav from './components/Nav/Nav';
 import Ingredients from './container/Ingredients/Ingredients';
 import MealList from './container/Meal/MealList';
 import Meal from './container/Meal/Meal';
+import RecipeDetails from './container/Home/recipeDetails';
 import Areas from './container/Areas/Areas';
 import store from './redux/configureStore';
 
@@ -27,6 +28,7 @@ const App = () => {
           <Nav mediaWidth={mediaWidth} />
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/recipe/:id" element={<RecipeDetails />} />
             <Route path="/meals" element={<Home />} />
             <Route path="/ingredients" element={<Ingredients mediaWidth={mediaWidth} />} />
             <Route path="/ingredients/:ingredient" element={<MealList />} />
