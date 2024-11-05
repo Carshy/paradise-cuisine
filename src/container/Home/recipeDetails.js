@@ -7,6 +7,10 @@ const RecipeDetails = () => {
   const recipe = location.state; // retrieve the recipe data fromthe state
 
   if (!recipe) return <div>No Recipe Data found!</div>;
+
+  // Split the details text into paragraphs
+  const paragraphs = recipe.details.split('\n\n');
+
   return (
     <div className="app__recipedetails">
       <h1>{recipe.title}</h1>
@@ -15,7 +19,11 @@ const RecipeDetails = () => {
       </div>
       <div className="details-content">
         <p className="details-excerpt">{recipe.excerpt}</p>
-        <p className="details-para">{recipe.details}</p>
+        {paragraphs.map((paragraph, index) => (
+          <p key={index} className="details-para">
+            {paragraph}
+          </p>
+        ))}
       </div>
     </div>
   );
