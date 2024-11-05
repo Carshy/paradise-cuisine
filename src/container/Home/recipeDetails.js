@@ -10,7 +10,9 @@ const RecipeDetails = () => {
   return (
     <div className="app__recipedetails">
       <h1>{recipe.title}</h1>
-      <img src={recipe.photo} alt="recipe pic" />
+      <div className="details-img">
+        <img className="image-field" src={recipe.photo} alt="recipe pic" />
+      </div>
       <p>{recipe.excerpt}</p>
       <p>{recipe.details}</p>
     </div>
