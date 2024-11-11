@@ -16,7 +16,7 @@ const HomePage = () => {
         </video>
         <div className="intro-overlay" />
         <div className="intro-content">
-          <h1>{ intro1 }</h1>
+          <h1 className="introhome-title">{ intro1 }</h1>
           <p>Explore a world of flavors and recipes, crafted with passion for every palate.</p>
         </div>
         <div className="arrow-container">

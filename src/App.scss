@@ -2,12 +2,11 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap");
 
 * {
   margin: 0;
@@ -21,3 +20,30 @@
 body {
   font-family: "Poppins", sans-serif;
 }
+
+// Sample styles
+// .app__sample {
+//   color: rgb(235, 86, 0);
+//   display: block;
+//   font-family: Arimo, sans-serif;
+//   font-size: 59px;
+//   font-weight: 700;
+//   height: 59px;
+//   letter-spacing: 2px;
+//   line-height: 59px;
+//   text-align: center;
+//   text-shadow: rgb(204, 204, 204) 4px 4px 8px;
+//   text-size-adjust: 100%;
+//   width: 387px;
+// }
+
+// .app__sample1 {
+//   color: rgb(33, 37, 41);
+//   font-family: Arimo, sans-serif;
+//   font-size: 59px;
+//   font-weight: 700;
+//   letter-spacing: 2px;
+//   line-height: 59px;
+//   text-shadow: rgb(204, 204, 204) 4px 4px 8px;
+//   text-size-adjust: 100%;
+// }
