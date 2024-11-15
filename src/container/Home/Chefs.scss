@@ -6,13 +6,13 @@
   padding: 2rem;
   overflow: hidden;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  
 
   .chef-title-div {
     display: flex;
     flex-direction: column;
     width: 30%;
+    background: #c0841d;
   }
 
   .app__chef-row {
