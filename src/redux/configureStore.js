@@ -7,6 +7,7 @@ import ingredientReducer from './ingredients/ingredients';
 import areasReducer from './areas/areas';
 import appStateReducer from './appState/appState';
 import recipesReducer from './slices/recipesSlice';
+import chefsReducer from './slices/chefsSlice';
 
 const rootReducer = combineReducers({
   categories: categoriesReducer,
@@ -16,6 +17,7 @@ const rootReducer = combineReducers({
   areas: areasReducer,
   appState: appStateReducer,
   recipes: recipesReducer,
+  chefs: chefsReducer,
 });
 
 const store = configureStore({

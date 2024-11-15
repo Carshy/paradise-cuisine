@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import Cooking from './Cooking';
 import Cookings from './Cookings';
+import Chefs from './Chefs';
 import { images } from '../../constants';
 import './HomePage.scss';
 
@@ -26,6 +27,7 @@ const HomePage = () => {
       </div>
       <Cooking />
       <Cookings />
+      <Chefs />
     </div>
   );
 };
