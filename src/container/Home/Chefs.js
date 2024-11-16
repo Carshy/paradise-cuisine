@@ -1,3 +1,4 @@
+/* eslint-disable arrow-body-style */
 /* eslint-disable react/jsx-one-expression-per-line */
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
@@ -24,6 +25,12 @@ const Chefs = () => {
     navigate(`/chef/${chef.id}`, { state: chef }); // pass chef data to the details page
   };
 
+  const getCardBackgroundColor = (index) => {
+    return index % 2 === 0
+      ? 'rgb(254, 205, 165)' // Light orange for even cards
+      : 'rgb(182, 227, 212)'; // Light green for odd cards
+  };
+
   return (
     <div className="app__chefs">
       <div className="chef-title-div">
@@ -37,7 +44,7 @@ const Chefs = () => {
         </p>
       </div>
       <div className="app__chef-row">
-        {chefs.map((chef) => (
+        {chefs.map((chef, index) => (
           <div
             key={chef.id}
             className="app__chefs-container"
@@ -49,6 +56,7 @@ const Chefs = () => {
                 handleChefClick(chef);
               }
             }}
+            style={{ backgroundColor: getCardBackgroundColor(index) }}
           >
             <div className="app__chef-details">
               <div className="app__chef-img">
