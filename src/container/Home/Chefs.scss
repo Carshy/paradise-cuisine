@@ -1,6 +1,6 @@
 .app__chefs {
   width: 100%;
-  height: 70vh;
+  height: 85vh;
   background-color: rgb(245, 240, 231);
   background-color: #fff;
   padding: 2rem;
@@ -13,6 +13,7 @@
     flex-direction: column;
     width: 30%;
     background: #c0841d;
+    padding: 2rem;
   }
 
   .app__chef-row {
